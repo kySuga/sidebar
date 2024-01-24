@@ -14,90 +14,142 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <header>
-      <div class="header__container">
-        <div class="header__mobile">
-          <div class="header__logo">
-            <a href="/home">
-              <img src="https://res.cloudinary.com/do9qt3sjt/image/upload/v1705861624/mother-earth-logo.webp" alt="">
-              <span class="visually-hidden">Mother Earth</span>
-            </a>
-          </div>
-          <button class="nav__mobile-toggle">
-            <i class="fas fa-bars" aria-hidden="true"></i>
-            <span class="visually-hidden">Menu</span>
-          </button>
+    <!-- This setup is primarily focused on the functionality of the dialog and not so much styling -->
+    <!-- As of build time, <dialog> and inert do not have full support -->
+
+    <h1 id="header">
+      An accessible dialog built out as a side sheet
+    </h1>
+
+    <button id="btn-size-chart" type="button">Size chart</button>
+
+    <!-- dialog -->
+    <div id="dialog-wrap" role="dialog" aria-modal="true" aria-labelledby="header__size-chart" aria-hidden="true" tabindex="-1">
+      <div id="dialog-shell" role="document" tabindex="0">
+        <div class="dialog-header">
+          <h2 id="header__size-chart">Men’s Size Chart</h2>
+          <button id="btn-close-dialog" aria-label="close size chart"><span aria-hidden="true">&#x58;</span></button>
         </div>
-        <nav class="nav__main" aria-label="main">
-          <ul>
-            <li>
-              <a href="/home">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="/about">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="/projects">
-                Projects
-              </a>
-            </li>
-            <li>
-              <a href="/contact">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <div class="header__social-container">
-          <ul role="list">
-            <li>
-              <a href="#">
-                <i class="fab fa-facebook" aria-hidden="true"></i>
-                <span class="visually-hidden">
-                  Visit Us on Facebook
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fab fa-twitter" aria-hidden="true"></i>
-                <span class="visually-hidden">
-                  Visit Us on Twitter
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fab fa-behance" aria-hidden="true"></i>
-                <span class="visually-hidden">
-                  Visit Us on Behance
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fab fa-linkedin" aria-hidden="true"></i>
-                <span class="visually-hidden">
-                  Visit Us on LinkedIn
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fab fa-sketch" aria-hidden="true"></i>
-                <span class="visually-hidden">
-                  Visit Us on Sketch
-                </span>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <div class="size-chart__table-wrap">
+          <table tabindex="0">
+            <caption>
+              Men’s Footwear
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">us</th>
+                <th scope="col">uk</th>
+                <th scope="col">eur</th>
+                <th scope="col">jpn (cm)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>7</td>
+                <td>6.5</td>
+                <td>40</td>
+                <td>25</td>
+              </tr>
+              <tr>
+                <td>7.5</td>
+                <td>7</td>
+                <td>41</td>
+                <td>25.5</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>7.5</td>
+                <td>41.5</td>
+                <td>26</td>
+              </tr>
+              <tr>
+                <td>8.5</td>
+                <td>8</td>
+                <td>42</td>
+                <td>26.5</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>8.5</td>
+                <td>43</td>
+                <td>27</td>
+              </tr>
+              <tr>
+                <td>9.5</td>
+                <td>9</td>
+                <td>43.5</td>
+                <td>27.5</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>9.5</td>
+                <td>44</td>
+                <td>28</td>
+              </tr>
+              <tr>
+                <td>10.5</td>
+                <td>10</td>
+                <td>44.5</td>
+                <td>28.5</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>10.5</td>
+                <td>45</td>
+                <td>29</td>
+              </tr>
+              <tr>
+                <td>11.5</td>
+                <td>11</td>
+                <td>46</td>
+                <td>29.5</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>11.5</td>
+                <td>46.5</td>
+                <td>30</td>
+              </tr>
+              <tr>
+                <td>12.5</td>
+                <td>12</td>
+                <td>47</td>
+                <td>30.5</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>12.5</td>
+                <td>48</td>
+                <td>31</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>13</td>
+                <td>49</td>
+                <td>32</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>14</td>
+                <td>50</td>
+                <td>33</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>15</td>
+                <td>51</td>
+                <td>34</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>     
       </div>
-    </header>
+
+      <div class="" id="dialog-overlay" aria-hidden="true"></div>
+    </div>
+
+    <!-- next focusable element in viewport for testing purposes only -->
+    <button id="btn-add-to-cart">Add to cart</button>
     <script src="js/main.js"></script>
   </body>
 </html>
